@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const serverless = require("serverless-http");
+
 
 const router = require('./routes');
 const bodyParser = require('body-parser');
@@ -24,7 +26,7 @@ app.use('/uploads', express.static('uploads'));
 app.use(
   cors()
 );
-app.use(router);
+app.use(`/.api`, router);
 
 mongoose.connect(
  process.env.MONGO_URL
@@ -40,3 +42,4 @@ app.listen(port, () => {
   console.log(`app listening on port ${port} !`);
 });
 module.exports = app;
+module.exports.handler = serverless(app);
