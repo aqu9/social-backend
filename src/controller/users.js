@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const userModel = require('../models/users');
-const { nanoid } = require('nanoid');
 const {
   userSchema,
   userUpdateSchema,

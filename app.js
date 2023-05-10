@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const router = require('./routes');
+const router = require('./src/routes');
 const bodyParser = require('body-parser');
 
 // Set the maximum request size limit

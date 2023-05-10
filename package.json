@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "startprod": "node src/app.js",
+    "startprod": "node app.js",
     "build": "echo 'Bulding.... (not actually doing something, but usually I would)'",
-    "start": "nodemon src/app.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
