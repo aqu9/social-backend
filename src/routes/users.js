@@ -9,9 +9,9 @@ const {
 } = require('../controller/users');
 const { isAuthorized } = require('../middleware/auth');
 
-router.get('/',isAuthorized, getUserList);
-router.get('/user' ,isAuthorized,getUserDeatil);
-router.post('/',isAuthorized, addUser);
+router.get('/', isAuthorized, getUserList);
+router.get('/user', isAuthorized, getUserDeatil);
+router.post('/', addUser);
 router.put('/:id', isAuthorized, updateUser);
 // router.delete('/:id', deleteUser);
 
